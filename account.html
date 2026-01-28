@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Store</title>
+  <link rel="stylesheet" href="account.css">
+</head>
+    <header class="header">
+        <div class="logo">
+          <img src="https://cdn-icons-png.freepik.com/256/3225/3225204.png?ga=GA1.1.989229223.1726552622&semt=ais_hybrid" style="width: 50px;" alt="Grocery Store Logo" class="logo-img">
+          Indrayani Fresho
+        </div>
+        <nav class="nav">  
+      <a href="index.html">Home</a>
+      <a href="#Contact">About</a>
+      <a href="products.html">Products</a>
+      <a href="#">News</a>
+      <a href="#Contact">Contact</a>
+    </nav>
+    <div class="account-cart">
+        <a href="checkout.html">
+          <img src="https://cdn-icons-png.freepik.com/256/10962/10962918.png?ga=GA1.1.989229223.1726552622&semt=ais_hybrid" style="width: 70px; padding-right: 20px;" alt="My cart">
+        </a>
+        <button class="shop-now-btn">
+            <a href="account.html" style="text-decoration: none; color: #fff;">My Account</a>
+        </button>
+        </div>
+  </header>
+<body>
+    <div class="container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <ul class="categories">
+            <li><a href="checkout.html">My Orders</a></li>
+            <li><a href="checkout.html">Wishlist</a></li>
+            <li><a href="#Contact">Need help?</a></li>
+            <li><a href="#" class="logout" style="font-size: medium;" onclick="logout()" >Logout</a></li>
+        </ul>
+      </aside>
+      <main class="main-content">
+        <h1>Hello, Amit</h1>
+        <p>Account Overview</p>
+        <div class="cta">
+            <div class="app-download">
+                <img src="https://img.freepik.com/premium-photo/teenager-farmer-girl-with-freshly-picked-vegetables-box-isolated-beige-wall-celebrating-victory_1368-94023.jpg?ga=GA1.1.989229223.1726552622&semt=ais_hybrid" style="width: 500px; border-radius: 30%;" alt="Download App">
+                <button>Download the App</button>
+            </div>
+            <div class="faq" style="width: 300px;">
+                <h2 >Frequently Asked Questions</h2>
+                <button><a href="#Contact" style="text-decoration: none; color: #fff;">FAQ</a></button>
+                <h3 style="padding-top: 50px;">Contact</h3>
+                <ul style="margin: 5px;">
+                  <li style="list-style: none;">Email: <a href="mailto:abc@gmail.com" style="text-decoration: none; color: #333; ">indrayanifresho@gmail.com</a></li>
+                  <li style="list-style: none;">Phone: <a href="tel:+924388400155" style="text-decoration: none ; color: #333; padding-top: 5px;">+91 9699214122</a></li>
+                  <li style="list-style: none;">Address: <a href="#alandi" style="color: #333; text-decoration: none; padding-top: 5px; padding-left: 2px;">Maharashtra,Pune – Alandi</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    </section>
+    </div>
+    <footer class="footer" style="background-image: url(https://img.freepik.com/free-photo/copy-space-plastic-bag-with-vegetables_23-2148889890.jpg?t=st=1732295132~exp=1732298732~hmac=6a9dad2a1c2c17b61b20c99eb31c2e55b95345289cc1dbf708297e55dad0f161&w=996);
+   background-size: cover;">
+    <div class="footer-container">
+      <!-- Grocery Store Section -->
+      <div  class="footer-column">
+        <h3 style="color: #27ae60; background-color: #fff;">Indrayani Fresho</h3>
+        <p>Welcome and open yourself to your truest love this year with us! With the Release Process</p>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn-icons-png.freepik.com/256/9093/9093741.png?ga=GA1.1.989229223.1726552622&semt=ais_hybrid" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.freepik.com/256/2504/2504947.png?ga=GA1.1.989229223.1726552622&semt=ais_hybrid" alt="Twitter"></a>
+          <a href="#"><img src="https://cdn-icons-png.freepik.com/256/2504/2504914.png?ga=GA1.1.989229223.1726552622&semt=ais_hybrid" alt="Google+"></a>
+        </div>
+      </div>
+
+      <!-- Company Section -->
+      <div id="footer" class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Latest News</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Care Section -->
+      <div class="footer-column">
+        <h3>Customer Care</h3>
+        <ul>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Track Your Order</a></li>
+          <li><a href="#">Payment Issue</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">FAQ</a></li> 
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div id="Contact" class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: <a href="mailto:abc@gmail.com">indrayanifresho@gmail.com</a></li>
+          <li>Phone: <a href="tel:+924388400155">+91 9699214122</a></li>
+          <li>Address: Maharashtra,Pune – Alandi</li>
+        </ul>
+      </div>
+    </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const userName = localStorage.getItem("userName");
+        if (userName) {
+          document.querySelector("h1").textContent = `Hello, ${userName}`;
+        } else {
+          window.location.href = "index.html"; // Redirect to homepage if not logged in
+        }
+      });
+      function logout() {
+    // Clear user session data (if any)
+    sessionStorage.clear(); // Clear session storage
+    localStorage.clear();  // Clear local storage (if using it)
+
+    // Redirect to the login page
+    window.location.href = "index.html"; // Replace "login.html" with the path to your login page
+}
+    </script>
+    </body>
+    </html>

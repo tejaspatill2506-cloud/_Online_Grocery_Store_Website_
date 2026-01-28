@@ -1,0 +1,150 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .categories-section {
+    padding: 5px 50px;
+    text-align: center;
+  }
+  
+  .categories-section h2 {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .highlight {
+    color: #27ae60;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .category-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .category-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .offer-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #eafbea;
+    border-radius: 10px;
+  }
+  
+  .offer-content {
+    max-width: 50%;
+    text-align: left;
+  }
+  
+  .offer-tagline {
+    font-size: 14px;
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+  .offer-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .offer-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .shop-now-btn {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .offer-banner img {
+    max-width: 40%;
+    border-radius: 10px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+  }
+  .nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  .account-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between cart and button */
+  }
+  
+  .cart-link img {
+    cursor: pointer;
+  }
+  
+  .shop-now-btn {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .shop-now-btn:hover {
+    background-color: #1e8f4f;
+  }
+
+  

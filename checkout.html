@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Store - Featured Categories</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="https://cdn-icons-png.freepik.com/256/3225/3225204.png?ga=GA1.1.989229223.1726552622&semt=ais_hybrid" style="width: 50px;" alt="Grocery Store Logo" class="logo-img">
+          Indrayani Fresho
+        </div>
+        <nav class="nav">  
+      <a href="index.html">Home</a>
+      <a href="#About">About</a>
+      <a href="products.html">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="account-cart">
+      <a href="checkout.html">
+        <img src="https://cdn-icons-png.freepik.com/256/10962/10962918.png?ga=GA1.1.989229223.1726552622&semt=ais_hybrid" style="width: 50px; padding-right: 20px;" alt="My cart">
+      </a>
+      <button class="shop-now-btn">
+        <a href="account.html" style="text-decoration: none; color: #fff;">My Account</a>
+      </button>
+      </div>
+  </header>
+  <main class="checkout-container">
+    <div class="checkout-content">
+      <!-- Grocery Image Section -->
+      <section class="grocery-image ">
+        <img src="https://img.freepik.com/premium-vector/fruit-trees-flat-style-vector-illustration-concepts_1253202-56977.jpg?ga=GA1.1.989229223.1726552622&semt=ais_hybrid"  alt= "Grocery Items" class="image">
+      </section>
+
+      <!-- Checkout Form Section -->
+      <section class="checkout-form-section">
+        <h2>Checkout</h2>
+
+        <!-- Cart Summary Section -->
+        <section class="cart-summary" id="cart-summary">
+          <h3>Your Cart</h3>
+          <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+          </div>
+          <div class="cart-total" id="cart-total">
+            <strong>Total: $0.00</strong>
+          </div>
+        </section>
+
+        <form class="checkout-form" id="checkout-form">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required style="width: 150px;">
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your delivery address" rows="3" required style="width: 350px;"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required style="width: 350px;">
+              <option value="credit-card">Credit Card</option>
+              <option value="debit-card">Debit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="cash-on-delivery">Cash on Delivery</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Order Notes (Optional):</label>
+            <textarea id="notes" name="notes" placeholder="Any special instructions?" rows="2" style="width: 350px;"></textarea>
+          </div>
+
+          <button type="submit" class="btn">
+            <a href="thankyou.html" style="text-decoration: none; color: #fff; display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:#ffff;
+    text-decoration: none;
+    background: #ff007f;
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden; transition: right 0.3s ease;background: #ff007f;
+    transform: translateY(-3px)">Place order</a>
+          </button>
+          
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Grocery Store | All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to display cart items on the checkout page
+    document.addEventListener("DOMContentLoaded", () => {
+      const cartItemsContainer = document.getElementById("cart-items");
+      const cartTotalContainer = document.getElementById("cart-total");
+  
+      // Get cart from localStorage
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+      if (cart.length > 0) {
+        let total = 0;
+  
+        // Generate HTML for each cart item
+        cart.forEach((item) => {
+          const itemElement = document.createElement("div");
+          itemElement.classList.add("cart-item");
+          itemElement.innerHTML = `
+            <p><strong>${item.name}</strong> (${item.size}) - ${item.price}</p>
+          `;
+          cartItemsContainer.appendChild(itemElement);
+  
+          // Calculate total price
+          const price = parseFloat(item.price.replace("₹", ""));
+          total += price;
+        });
+  
+        // Update the total price in the cart
+        cartTotalContainer.innerHTML = `<strong>Total: ₹${total.toFixed(2)}</strong>`;
+      } else {
+        cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+      }
+    });
+  </script>
+  
+</body>
+</html>

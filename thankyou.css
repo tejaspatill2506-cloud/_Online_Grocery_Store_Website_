@@ -1,0 +1,96 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-size: 400% 400%;
+    background-image: url(https://img.freepik.com/free-photo/top-view-vegetables-arrangement_23-2148949682.jpg?uid=R175653852&ga=GA1.1.870238213.1732369460&semt=ais_hybrid);
+    animation: gradientBackground 6s ease infinite;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #27ae60;
+    text-align: center;
+}
+
+/* Container */
+.thank-you-container {
+    animation: fadeInZoom 2s ease-out forwards;
+}
+
+/* Text Styles */
+.thank-you-text {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+.continue-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:#ffff;
+    text-decoration: none;
+    background: #ff007f;
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.continue-btn::after {
+    content: "→";
+    position: absolute;
+    right: 20px;
+    transition: right 0.3s ease;
+}
+
+.continue-btn:hover {
+    background: #ff007f;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.continue-btn:hover::after {
+    right: 25px;
+}
+
+/* Animations */
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
